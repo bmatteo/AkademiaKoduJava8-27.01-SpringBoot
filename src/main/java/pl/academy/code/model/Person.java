@@ -3,7 +3,7 @@ package pl.academy.code.model;
 public class Person {
     private String name;
     private String surname;
-    private int age;
+    private Integer age = null;
     private boolean admin;
 
     public String getName() {
@@ -22,11 +22,11 @@ public class Person {
         this.surname = surname;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

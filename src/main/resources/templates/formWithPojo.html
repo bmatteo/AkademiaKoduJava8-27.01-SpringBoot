@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <nav th:insert="fragments.html :: menuFragmnet"></nav>
-<form method="post" th:object="${person}">
-    <input type="text" th:field="*{name}">
-    <input type="text" th:field="*{surname}">
-    <input type="text" th:field="*{age}">
-    <input type="checkbox" th:field="*{admin}">
+<div class="formWrapper">
+<form method="post" th:object="${person}" id="superForm">
+    <div><input type="text" th:field="*{name}" class="specialInput" id="input1" placeholder="Imię"></div>
+    <div><input type="text" th:field="*{surname}" placeholder="Nazwisko"></div>
+    <div><input type="text" th:field="*{age}" placeholder="Wiek"></div>
+    <div><div>Admin: </div><input type="checkbox" th:field="*{admin}"></div>
 
     <input type="submit" value="OK">
 </form>
+</div>
 </body>
 </html>
